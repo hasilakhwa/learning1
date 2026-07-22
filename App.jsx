@@ -1,22 +1,25 @@
 import React from 'react';
-import { View, Text, Button } from 'react-native';
-import First from "./src/component/first";
+// import { View, Text, Button } from 'react-native';
+// import First from "./src/component/first";
+import { View } from 'react-native';
+import JSX from './src/component/JSX';
 
 const App = () => {
   return (
     <View
-      style={{
+    style={{
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
       }}
-    >
-      <Text style={{ fontSize: 30, fontWeight: 'bold', color: 'white' }}>
+      >
+      {/* <Text style={{ fontSize: 30, fontWeight: 'bold', color: 'white' }}>
         Hello Hasnain 🚀
-      </Text>
-      <Text style={{ fontSize: 40, color: 'white', backgroundColor: 'pink' }}>I am Mobile developer</Text>
-      <Button title='press Here' />
-      <First />
+        </Text>
+        <Text style={{ fontSize: 40, color: 'white', backgroundColor: 'pink' }}>I am Mobile developer</Text>
+        <Button title='press Here' />
+        <First /> */}
+      <JSX />
     </View>
   );
 };                     
