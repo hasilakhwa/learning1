@@ -2,8 +2,8 @@ import React from 'react';
 // import { View, Text, Button } from 'react-native';
 // import First from "./src/component/first";
 import { View } from 'react-native';
-import JSX from './src/component/JSX';
-
+// import JSX from './src/component/JSX';
+import OnPress from './src/component/OnPress';
 const App = () => {
   return (
     <View
@@ -18,8 +18,9 @@ const App = () => {
         </Text>
         <Text style={{ fontSize: 40, color: 'white', backgroundColor: 'pink' }}>I am Mobile developer</Text>
         <Button title='press Here' />
-        <First /> */}
       <JSX />
+        <First /> */}
+      <OnPress />
     </View>
   );
 };                     
