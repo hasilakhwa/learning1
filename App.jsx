@@ -5,7 +5,7 @@ import { View } from 'react-native';
 // import JSX from './src/component/JSX';
 // import OnPress from './src/component/OnPress';
 // import UseStateHook from './src/component/UseStateHook';
-import Props from './src/component/Props'
+import InputText from './src/component/InputText';
 const App = () => {
   return (
     <View
@@ -24,7 +24,7 @@ const App = () => {
         <First /> */}
       {/* <OnPress /> */}
       {/* <UseStateHook /> */}
-      <Props />
+      <InputText  />
     </View>
   );
 };                     
