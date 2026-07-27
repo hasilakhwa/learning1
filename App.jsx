@@ -5,15 +5,16 @@ import { View } from 'react-native';
 // import JSX from './src/component/JSX';
 // import OnPress from './src/component/OnPress';
 // import UseStateHook from './src/component/UseStateHook';
-import InputText from './src/component/InputText';
+// import Styling from './src/component/Styling';
+import FlatListScreen from './src/component/FlatListScreen';
 const App = () => {
   return (
     <View
-    style={{
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
+    // style={{
+    //     flex: 1,
+    //     justifyContent: 'center',
+    //     alignItems: 'center',
+    //   }}
       >
       {/* <Text style={{ fontSize: 30, fontWeight: 'bold', color: 'white' }}>
         Hello Hasnain 🚀
@@ -24,7 +25,9 @@ const App = () => {
         <First /> */}
       {/* <OnPress /> */}
       {/* <UseStateHook /> */}
-      <InputText  />
+      {/* <InputText  /> */}
+      {/* <Styling /> */}
+      <FlatListScreen />
     </View>
   );
 };                     
