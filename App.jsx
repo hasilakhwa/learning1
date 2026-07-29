@@ -9,7 +9,8 @@ import { View } from 'react-native';
 // import FlatListScreen from './src/component/FlatListScreen';
 // import InputText from './src/component/InputText';
 // import Props from './src/component/Props';
-import SectionListScreen from './src/component/SectionListScreen'
+// import SectionListScreen from './src/component/SectionListScreen'
+import LoginForm from './src/component/LoginForm'
 const App = () => {
   return (
     <View
@@ -34,7 +35,8 @@ const App = () => {
       {/* <FlatListScreen /> */}
       {/* <InputText /> */}
       {/* <Props /> */}
-      <SectionListScreen />
+      {/* <SectionListScreen /> */}
+      <LoginForm />
     </View>
   );
 };                     
