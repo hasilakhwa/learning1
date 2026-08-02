@@ -11,10 +11,12 @@ import { View } from 'react-native';
 // import Props from './src/component/Props';
 // import SectionListScreen from './src/component/SectionListScreen'
 // import LoginForm from './src/component/LoginForm'
-import ContactListScreen from './src/screens/Contact/ContactListScreen'
+// import ContactListScreen from './src/screens/Contact/ContactListScreen'
+import Grid from './src/component/Grid'
 const App = () => {
   return (
     <View
+    style={{flex:1}}
     // style={{
     //     flex: 1,
     //     justifyContent: 'center',
@@ -38,7 +40,8 @@ const App = () => {
       {/* <Props /> */}
       {/* <SectionListScreen /> */}
       {/* <LoginForm /> */}
-      <ContactListScreen />
+      {/* <ContactListScreen /> */}
+      <Grid />
     </View>
   );
 };                     
