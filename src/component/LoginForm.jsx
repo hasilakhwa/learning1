@@ -1,6 +1,5 @@
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native'
 import React, {useState} from 'react'
-import { Button } from 'react-native/types_generated/index';
 
 const LoginForm = () => {
     const [email, setEmail] = useState('');
@@ -67,7 +66,7 @@ const styles = StyleSheet.create({
         borderWidth:1,
         backgroundColor:'#fff',
         fontSize:16,
-        color:'#ccc'
+        color:'#222020'
     },
     Button:{
         alignItems:'center',

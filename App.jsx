@@ -10,7 +10,8 @@ import { View } from 'react-native';
 // import InputText from './src/component/InputText';
 // import Props from './src/component/Props';
 // import SectionListScreen from './src/component/SectionListScreen'
-import LoginForm from './src/component/LoginForm'
+// import LoginForm from './src/component/LoginForm'
+import ContactListScreen from './src/screens/Contact/ContactListScreen'
 const App = () => {
   return (
     <View
@@ -36,7 +37,8 @@ const App = () => {
       {/* <InputText /> */}
       {/* <Props /> */}
       {/* <SectionListScreen /> */}
-      <LoginForm />
+      {/* <LoginForm /> */}
+      <ContactListScreen />
     </View>
   );
 };                     
