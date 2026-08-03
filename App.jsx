@@ -12,7 +12,8 @@ import { View } from 'react-native';
 // import SectionListScreen from './src/component/SectionListScreen'
 // import LoginForm from './src/component/LoginForm'
 // import ContactListScreen from './src/screens/Contact/ContactListScreen'
-import Grid from './src/component/Grid'
+// import Grid from './src/component/Grid'
+import ClassComponent from './src/component/ClassComponent'
 const App = () => {
   return (
     <View
@@ -41,7 +42,8 @@ const App = () => {
       {/* <SectionListScreen /> */}
       {/* <LoginForm /> */}
       {/* <ContactListScreen /> */}
-      <Grid />
+      {/* <Grid /> */}
+      <ClassComponent />
     </View>
   );
 };                     
