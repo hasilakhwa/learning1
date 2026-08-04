@@ -14,7 +14,8 @@ import { View } from 'react-native';
 // import ContactListScreen from './src/screens/Contact/ContactListScreen'
 // import Grid from './src/component/Grid'
 // import ClassComponent from './src/component/ClassComponent'
-import UseEffectHook from './src/component/UseEffectHook'
+// import UseEffectHook from './src/component/UseEffectHook'
+import UseEffectHookUpdatingPhase from './src/component/UseEffectHookUpdatingPhase'
 const App = () => {
   return (
     <View
@@ -45,7 +46,8 @@ const App = () => {
       {/* <ContactListScreen /> */}
       {/* <Grid /> */}
       {/* <ClassComponent /> */}
-      <UseEffectHook />
+      {/* <UseEffectHook /> */}
+      <UseEffectHookUpdatingPhase />
     </View>
   );
 };                     
