@@ -13,7 +13,8 @@ import { View } from 'react-native';
 // import LoginForm from './src/component/LoginForm'
 // import ContactListScreen from './src/screens/Contact/ContactListScreen'
 // import Grid from './src/component/Grid'
-import ClassComponent from './src/component/ClassComponent'
+// import ClassComponent from './src/component/ClassComponent'
+import UseEffectHook from './src/component/UseEffectHook'
 const App = () => {
   return (
     <View
@@ -43,7 +44,8 @@ const App = () => {
       {/* <LoginForm /> */}
       {/* <ContactListScreen /> */}
       {/* <Grid /> */}
-      <ClassComponent />
+      {/* <ClassComponent /> */}
+      <UseEffectHook />
     </View>
   );
 };                     
