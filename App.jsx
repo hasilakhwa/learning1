@@ -15,7 +15,7 @@ import { View } from 'react-native';
 // import Grid from './src/component/Grid'
 // import ClassComponent from './src/component/ClassComponent'
 // import UseEffectHook from './src/component/UseEffectHook'
-import UseEffectHookUpdatingPhase from './src/component/UseEffectHookUpdatingPhase'
+import UseEffectHookUnmountedPhase from './src/component/UseEffectHookUnmountedPhase'
 const App = () => {
   return (
     <View
@@ -47,7 +47,7 @@ const App = () => {
       {/* <Grid /> */}
       {/* <ClassComponent /> */}
       {/* <UseEffectHook /> */}
-      <UseEffectHookUpdatingPhase />
+      <UseEffectHookUnmountedPhase />
     </View>
   );
 };                     
