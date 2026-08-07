@@ -17,7 +17,8 @@ import { View } from 'react-native';
 // import UseEffectHook from './src/component/UseEffectHook'
 // import UseEffectHookUnmountedPhase from './src/component/UseEffectHookUnmountedPhase'
 // import HideShowToggle from './src/component/HideShowToggle'
-import StyleWithButton from './src/component/StyleWithButton'
+// import StyleWithButton from './src/component/StyleWithButton'
+import Loader from './src/component/Loader'
 const App = () => {
   return (
     <View
@@ -51,7 +52,8 @@ const App = () => {
       {/* <UseEffectHook /> */}
       {/* <UseEffectHookUnmountedPhase /> */}
       {/* <HideShowToggle /> */}
-      <StyleWithButton />
+      {/* <StyleWithButton /> */}
+      <Loader />
     </View>
   );
 };                     
