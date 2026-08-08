@@ -20,7 +20,8 @@ import { View } from 'react-native';
 // import StyleWithButton from './src/component/StyleWithButton'
 // import Loader from './src/component/Loader'
 // import PressableComponent from './src/component/PressableComponent'
-import StatusBarExample from './src/component/StatusBarExample'
+// import StatusBarExample from './src/component/StatusBarExample'
+import UseRefHook from './src/component/UseRefHook'
 const App = () => {
   return (
     <View
@@ -57,7 +58,8 @@ const App = () => {
       {/* <StyleWithButton /> */}
       {/* <Loader /> */}
       {/* <PressableComponent /> */}
-      <StatusBarExample />
+      {/* <StatusBarExample /> */}
+      <UseRefHook />
     </View>
   );
 };                     
