@@ -19,7 +19,8 @@ import { View } from 'react-native';
 // import HideShowToggle from './src/component/HideShowToggle'
 // import StyleWithButton from './src/component/StyleWithButton'
 // import Loader from './src/component/Loader'
-import PressableComponent from './src/component/PressableComponent'
+// import PressableComponent from './src/component/PressableComponent'
+import StatusBarExample from './src/component/StatusBarExample'
 const App = () => {
   return (
     <View
@@ -55,7 +56,8 @@ const App = () => {
       {/* <HideShowToggle /> */}
       {/* <StyleWithButton /> */}
       {/* <Loader /> */}
-      <PressableComponent />
+      {/* <PressableComponent /> */}
+      <StatusBarExample />
     </View>
   );
 };                     
