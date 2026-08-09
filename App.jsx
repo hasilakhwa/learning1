@@ -22,7 +22,8 @@ import { View } from 'react-native';
 // import PressableComponent from './src/component/PressableComponent'
 // import StatusBarExample from './src/component/StatusBarExample'
 // import UseRefHook from './src/component/UseRefHook'
-import ModalDialogBox from './src/component/ModalDialogBox'
+// import ModalDialogBox from './src/component/ModalDialogBox'
+import AlertExample from './src/component/AlertExample'
 const App = () => {
   return (
     <View
@@ -61,7 +62,8 @@ const App = () => {
       {/* <PressableComponent /> */}
       {/* <StatusBarExample /> */}
       {/* <UseRefHook /> */}
-      <ModalDialogBox />
+      {/* <ModalDialogBox /> */}
+      <AlertExample />
     </View>
   );
 };                     
