@@ -25,11 +25,12 @@ import { View } from 'react-native';
 // import ModalDialogBox from './src/component/ModalDialogBox'
 // import AlertExample from './src/component/AlertExample'
 // import GET_API from './src/component/GET_API'
-import POST_API from './src/component/POST_API'
+// import POST_API from './src/component/POST_API'
+import PUT_API from './src/component/PUT_API'
 const App = () => {
   return (
     <View
-    style={{flex:1}}
+    style={{flex:1}}              
     // style={{
     //     flex: 1,
     //     justifyContent: 'center',
@@ -67,7 +68,8 @@ const App = () => {
       {/* <ModalDialogBox /> */}
       {/* <AlertExample /> */}
       {/* <GET_API /> */}
-      <POST_API />
+      {/* <POST_API /> */}
+      <PUT_API/>
     </View>
   );
 };                     
