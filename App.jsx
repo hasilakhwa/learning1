@@ -24,7 +24,8 @@ import { View } from 'react-native';
 // import UseRefHook from './src/component/UseRefHook'
 // import ModalDialogBox from './src/component/ModalDialogBox'
 // import AlertExample from './src/component/AlertExample'
-import GET_API from './src/component/GET_API'
+// import GET_API from './src/component/GET_API'
+import POST_API from './src/component/POST_API'
 const App = () => {
   return (
     <View
@@ -65,7 +66,8 @@ const App = () => {
       {/* <UseRefHook /> */}
       {/* <ModalDialogBox /> */}
       {/* <AlertExample /> */}
-      <GET_API />
+      {/* <GET_API /> */}
+      <POST_API />
     </View>
   );
 };                     
