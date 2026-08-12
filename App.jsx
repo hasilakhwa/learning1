@@ -26,7 +26,8 @@ import { View } from 'react-native';
 // import AlertExample from './src/component/AlertExample'
 // import GET_API from './src/component/GET_API'
 // import POST_API from './src/component/POST_API'
-import PUT_API from './src/component/PUT_API'
+// import PUT_API from './src/component/PUT_API'
+import PATCH_API from './src/component/PATCH_API'
 const App = () => {
   return (
     <View
@@ -69,7 +70,8 @@ const App = () => {
       {/* <AlertExample /> */}
       {/* <GET_API /> */}
       {/* <POST_API /> */}
-      <PUT_API/>
+      {/* <PUT_API/> */}
+      <PATCH_API/>
     </View>
   );
 };                     
