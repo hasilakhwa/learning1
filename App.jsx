@@ -29,7 +29,8 @@ import { View } from 'react-native';
 // import PUT_API from './src/component/PUT_API'
 // import PATCH_API from './src/component/PATCH_API'
 // import DELETE_API from './src/component/DELETE_API'
-import GET_API_LIST from './src/component/GET_API_LIST'
+// import GET_API_LIST from './src/component/GET_API_LIST'
+import PlatformExapmle from './src/component/PlatformExapmle'
 const App = () => {
   return (
     <View
@@ -75,7 +76,8 @@ const App = () => {
       {/* <PUT_API/> */}
       {/* <PATCH_API/> */}
       {/* <DELETE_API /> */}
-      <GET_API_LIST />
+      {/* <GET_API_LIST /> */}
+      <PlatformExapmle />
     </View>
   );
 };                     

@@ -1,5 +1,5 @@
 import { View, Text, FlatList, StyleSheet } from 'react-native';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 const GET_API_LIST = () => {
