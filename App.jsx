@@ -30,7 +30,8 @@ import { View } from 'react-native';
 // import PATCH_API from './src/component/PATCH_API'
 // import DELETE_API from './src/component/DELETE_API'
 // import GET_API_LIST from './src/component/GET_API_LIST'
-import PlatformExapmle from './src/component/PlatformExapmle'
+// import PlatformExapmle from './src/component/PlatformExapmle'
+import Seach from './src/component/Seach'
 const App = () => {
   return (
     <View
@@ -77,7 +78,8 @@ const App = () => {
       {/* <PATCH_API/> */}
       {/* <DELETE_API /> */}
       {/* <GET_API_LIST /> */}
-      <PlatformExapmle />
+      {/* <PlatformExapmle /> */}
+      <Seach/>
     </View>
   );
 };                     
