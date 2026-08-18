@@ -31,7 +31,7 @@ import { View } from 'react-native';
 // import DELETE_API from './src/component/DELETE_API'
 // import GET_API_LIST from './src/component/GET_API_LIST'
 // import PlatformExapmle from './src/component/PlatformExapmle'
-import Seach from './src/component/Seach'
+import Search from './src/component/Search'
 const App = () => {
   return (
     <View
@@ -79,7 +79,7 @@ const App = () => {
       {/* <DELETE_API /> */}
       {/* <GET_API_LIST /> */}
       {/* <PlatformExapmle /> */}
-      <Seach/>
+      <Search/>
     </View>
   );
 };                     

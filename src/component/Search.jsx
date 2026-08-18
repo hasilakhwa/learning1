@@ -8,7 +8,7 @@ const Contacts = [
   { id: 4, name: 'Ali' },
   { id: 5, name: 'Hanzala' },
 ];
-const Seach = () => {
+const Search = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const filteredData = Contacts.filter(contact =>
     contact.name.toLowerCase().includes(searchQuery.toLowerCase()),
@@ -22,7 +22,7 @@ const Seach = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Seach</Text>
+      <Text style={styles.title}>Search</Text>
       <TextInput
         style={styles.searchBar}
         placeholder="Search Contacts..."
@@ -84,4 +84,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Seach;
+export default Search;
