@@ -89,7 +89,7 @@
 
 // starting navigation now
 
-import { View, Text } from 'react-native'
+import { View, Text, StyleSheet } from 'react-native'
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -100,13 +100,47 @@ const Stack = createNativeStackNavigator();
 const App = () => {
   return (
      <NavigationContainer>
-        <Stack.Navigator>
-            <Stack.Screen name='Login' component={Login} />
+        <Stack.Navigator 
+        screenOptions={{
+          headerStyle:styles.header,
+          headerTintColor:'#fff',
+          headerTitleStyle:styles.headerTitle,
+          contentStyle:styles.screen
+        }}
+        >
+            <Stack.Screen name='Login' component={Login} 
+            // options={
+            //   {
+            //     title:'Login Form Page',
+            //     headerTintColor:'red',
+            //     headerTitleStyle:{
+            //       // color:'blue',
+            //       // fontSize:44
+            //     },
+            //     headerStyle:{
+            //       backgroundColor:'orange'
+            //     }
+            //   }
+            // }
+            />
             <Stack.Screen name='Home' component={Home} options={{headerShown: false}} />
             <Stack.Screen name='About' component={About} />
         </Stack.Navigator>
        </NavigationContainer>
   )
 }
+
+const styles = StyleSheet.create({
+  header:{
+backgroundColor:'#6200EE'
+  },
+  headerTitle:{
+    fontWeight:'bold',
+    fontSize:30,
+  },
+  screen:{
+    backgroundColor:'lightgreen',
+  },
+})
 
 export default App
