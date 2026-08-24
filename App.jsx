@@ -36,7 +36,7 @@
 // const App = () => {
 //   return (
 //     <View
-//     style={{flex:1}}              
+//     style={{flex:1}}
 //     // style={{
 //     //     flex: 1,
 //     //     justifyContent: 'center',
@@ -83,64 +83,139 @@
 //       <Search/>
 //     </View>
 //   );
-// };                     
+// };
 
 // export default App;
 
 // starting navigation now
+// Stack Navigation
 
-import { View, Text, StyleSheet } from 'react-native'
-import React from 'react'
+// import { View, Text, StyleSheet, Button, Alert } from 'react-native';
+// import React from 'react';
+// import { NavigationContainer } from '@react-navigation/native';
+// import { createNativeStackNavigator } from '@react-navigation/native-stack';
+// import Home from './src/Navigation-screens/Stack-Navigation/Home';
+// import About from './src/Navigation-screens/Stack-Navigation/About';
+// import Login from './src/Navigation-screens/Stack-Navigation/Login';
+// import MyHeader from './src/Navigation-screens/Stack-Navigation/MyHeader';
+// import Example from './src/Navigation-screens/Stack-Navigation/Example';
+// const Stack = createNativeStackNavigator();
+// // const sayHello = () => {
+// //   Alert.alert('Hello', 'This is builtin component in navigation')
+// // }
+
+// // const headerTitle = () => <Button title="One" color="red" onPress={sayHello} />
+// // const headerRight = () => (
+// //   <Button title="Two" color="green" onPress={sayHello} />
+// // );
+
+// const myExample = ()=> <Example />
+// const App = () => {
+//   return (
+//     <NavigationContainer>
+//       <Stack.Navigator
+//         screenOptions={{
+//           headerStyle: styles.header,
+//           headerTintColor: '#fff',
+//           headerTitleStyle: styles.headerTitle,
+//           contentStyle: styles.screen,
+//         }}
+//       >
+//         <Stack.Screen
+//           name="Header"
+//           component={MyHeader}
+//           options={{
+//             title: '',
+//             // headerLeft: () => <Button title="One" color="red" />,
+//             // headerRight: () => <Button title="Two" color="green" />,
+//             // headerLeft:headerTitle,
+//             // headerRight:headerRight
+//             headerTitle: myExample
+//           }}
+//         />
+//         <Stack.Screen
+//           name="Login"
+//           component={Login}
+//           // options={
+//           //   {
+//           //     title:'Login Form Page',
+//           //     headerTintColor:'red',
+//           //     headerTitleStyle:{
+//           //       // color:'blue',
+//           //       // fontSize:44
+//           //     },
+//           //     headerStyle:{
+//           //       backgroundColor:'orange'
+//           //     }
+//           //   }
+//           // }
+//         />
+//         <Stack.Screen
+//           name="Home"
+//           component={Home}
+//           options={{ headerShown: false }}
+//         />
+//         <Stack.Screen name="About" component={About} />
+//       </Stack.Navigator>
+//     </NavigationContainer>
+//   );
+// };
+
+// const styles = StyleSheet.create({
+//   header: {
+//     backgroundColor: '#6200EE',
+//   },
+//   headerTitle: {
+//     fontWeight: 'bold',
+//     fontSize: 30,
+//   },
+//   screen: {
+//     backgroundColor: 'lightgreen',
+//   },
+// });
+
+// export default App;
+
+// Drawer Navigation
+import 'react-native-gesture-handler'
+import { View, Text, StyleSheet } from 'react-native';
+import React from 'react';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
-import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Home from './src/Navigation-screens/Home';
-import About from './src/Navigation-screens/About'
-import Login from './src/Navigation-screens/Login'
-const Stack = createNativeStackNavigator();
+import Home from './src/Navigation-screens/Drawer-Navigation/Home';
+import Profile from './src/Navigation-screens/Drawer-Navigation/Profile';
+import Settings from './src/Navigation-screens/Drawer-Navigation/Settings';
+
+const Drawer = createDrawerNavigator();
 const App = () => {
   return (
-     <NavigationContainer>
-        <Stack.Navigator 
+    <NavigationContainer>
+      <Drawer.Navigator
         screenOptions={{
-          headerStyle:styles.header,
-          headerTintColor:'#fff',
-          headerTitleStyle:styles.headerTitle,
-          contentStyle:styles.screen
+          drawerStyle: {
+            backgroundColor: '#e6e6e6',
+            width: 240,
+          },
+          drawerLabelStyle: {
+            fontSize: 18,
+            color: '#333',
+          },
+          headerStyle: {
+            backgroundColor: '#6200EE',
+          },
+          headerTintColor: '#fff',
+          headerTitleAlign: 'center',
         }}
-        >
-            <Stack.Screen name='Login' component={Login} 
-            // options={
-            //   {
-            //     title:'Login Form Page',
-            //     headerTintColor:'red',
-            //     headerTitleStyle:{
-            //       // color:'blue',
-            //       // fontSize:44
-            //     },
-            //     headerStyle:{
-            //       backgroundColor:'orange'
-            //     }
-            //   }
-            // }
-            />
-            <Stack.Screen name='Home' component={Home} options={{headerShown: false}} />
-            <Stack.Screen name='About' component={About} />
-        </Stack.Navigator>
-       </NavigationContainer>
-  )
-}
+      >
+        <Drawer.Screen name="Home" component={Home} />
+        <Drawer.Screen name="Profile" component={Profile} />
+        <Drawer.Screen name="Settings" component={Settings} />
+      </Drawer.Navigator>
+    </NavigationContainer>
+  );
+};
 
-const styles = StyleSheet.create({
-  header:{
-backgroundColor:'#6200EE'
-  },
-  headerTitle:{
-    fontWeight:'bold',
-    fontSize:30,
-  },
-  screen:{
-    backgroundColor:'lightgreen',
-  },
-})
 
-export default App
+export default App;
+
+
