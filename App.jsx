@@ -87,8 +87,9 @@
 
 // export default App;
 
-// starting navigation now
-// Stack Navigation
+// ########## <starting navigation now> ##########
+
+// *************** <STACK NAVIGATION> ***************
 
 // import { View, Text, StyleSheet, Button, Alert } from 'react-native';
 // import React from 'react';
@@ -176,46 +177,94 @@
 
 // export default App;
 
-// Drawer Navigation
-import 'react-native-gesture-handler'
-import { View, Text, StyleSheet } from 'react-native';
-import React from 'react';
-import { createDrawerNavigator } from '@react-navigation/drawer';
-import { NavigationContainer } from '@react-navigation/native';
-import Home from './src/Navigation-screens/Drawer-Navigation/Home';
-import Profile from './src/Navigation-screens/Drawer-Navigation/Profile';
-import Settings from './src/Navigation-screens/Drawer-Navigation/Settings';
+// **************** <DRAWER NAVIGATION> ***************
+// import 'react-native-gesture-handler'
+// import { View, Text, StyleSheet } from 'react-native';
+// import React from 'react';
+// import { createDrawerNavigator } from '@react-navigation/drawer';
+// import { NavigationContainer } from '@react-navigation/native';
+// import Home from './src/Navigation-screens/Drawer-Navigation/Home';
+// import Profile from './src/Navigation-screens/Drawer-Navigation/Profile';
+// import Settings from './src/Navigation-screens/Drawer-Navigation/Settings';
 
-const Drawer = createDrawerNavigator();
-const App = () => {
-  return (
-    <NavigationContainer>
-      <Drawer.Navigator
-        screenOptions={{
-          drawerStyle: {
-            backgroundColor: '#e6e6e6',
-            width: 240,
-          },
-          drawerLabelStyle: {
-            fontSize: 18,
-            color: '#333',
-          },
-          headerStyle: {
-            backgroundColor: '#6200EE',
-          },
-          headerTintColor: '#fff',
-          headerTitleAlign: 'center',
-        }}
-      >
-        <Drawer.Screen name="Home" component={Home} />
-        <Drawer.Screen name="Profile" component={Profile} />
-        <Drawer.Screen name="Settings" component={Settings} />
-      </Drawer.Navigator>
-    </NavigationContainer>
-  );
-};
+// const Drawer = createDrawerNavigator();
+// const App = () => {
+//   return (
+//     <NavigationContainer>
+//       <Drawer.Navigator
+//         screenOptions={{
+//           drawerStyle: {
+//             backgroundColor: '#e6e6e6',
+//             width: 240,
+//           },
+//           drawerLabelStyle: {
+//             fontSize: 18,
+//             color: '#333',
+//           },
+//           headerStyle: {
+//             backgroundColor: '#6200EE',
+//           },
+//           headerTintColor: '#fff',
+//           headerTitleAlign: 'center',
+//         }}
+//       >
+//         <Drawer.Screen name="Home" component={Home} />
+//         <Drawer.Screen name="Profile" component={Profile} />
+//         <Drawer.Screen name="Settings" component={Settings} />
+//       </Drawer.Navigator>
+//     </NavigationContainer>
+//   );
+// };
 
 
-export default App;
+// export default App;
+
+// *************** <TAB NAVIGATION> ***************
+
+  import { View, Text } from 'react-native'
+  import React from 'react'
+  import { NavigationContainer } from '@react-navigation/native'
+  import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+  import HomeScreen from './src/Navigation-screens/BottomTab-Navigation/HomeScreen'
+  import ProfileScreen from './src/Navigation-screens/BottomTab-Navigation/ProfileScreen'
+  import SettingScreen from './src/Navigation-screens/BottomTab-Navigation/SettingScreen'
+  import Icon from 'react-native-vector-icons/Ionicons'
+  const Tab = createBottomTabNavigator()
+
+  const getTabBarIcon = (routeName, focused, color, size) => {
+    let iconName;
+    if(routeName === 'Home'){
+      iconName = focused? 'home' : 'home-outline';
+    }
+    else if(routeName === 'Profile'){
+      iconName = focused? 'person' : 'person-outline';
+    }
+    else if(routeName === 'Setting'){
+      iconName = focused? 'settings' : 'settings-outline';
+    }
+    return <Icon name={iconName} size={size} color={color} />
+
+  }
+  const App = () => {
+    return (
+      <NavigationContainer>
+        <Tab.Navigator screenOptions={({route}) => ({
+          tabBarIcon: ({focused, color, size}) => getTabBarIcon(route.name,focused,color,size),
+          tabBarActiveTintColor:'#007bdd',
+          tabBarInactiveTintColor:'gray',
+          tabBarStyle:{
+            paddingBottom:5,
+            height:60,
+          },
+    })}>
+          <Tab.Screen name='Home' component={HomeScreen} />
+          <Tab.Screen name='Profile' component={ProfileScreen} />
+          <Tab.Screen name='Setting' component={SettingScreen} />
+        </Tab.Navigator>
+      </NavigationContainer>
+    )
+  }
+
+  export default App
 
 
