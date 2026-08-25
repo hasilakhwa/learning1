@@ -219,52 +219,81 @@
 
 // export default App;
 
-// *************** <TAB NAVIGATION> ***************
+// *************** <BOTTOM TAB NAVIGATION> ***************
 
-  import { View, Text } from 'react-native'
-  import React from 'react'
-  import { NavigationContainer } from '@react-navigation/native'
-  import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-  import HomeScreen from './src/Navigation-screens/BottomTab-Navigation/HomeScreen'
-  import ProfileScreen from './src/Navigation-screens/BottomTab-Navigation/ProfileScreen'
-  import SettingScreen from './src/Navigation-screens/BottomTab-Navigation/SettingScreen'
-  import Icon from 'react-native-vector-icons/Ionicons'
-  const Tab = createBottomTabNavigator()
+  // import { View, Text } from 'react-native'
+  // import React from 'react'
+  // import { NavigationContainer } from '@react-navigation/native'
+  // import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
+  // import HomeScreen from './src/Navigation-screens/BottomTab-Navigation/HomeScreen'
+  // import ProfileScreen from './src/Navigation-screens/BottomTab-Navigation/ProfileScreen'
+  // import SettingScreen from './src/Navigation-screens/BottomTab-Navigation/SettingScreen'
+  // import Icon from 'react-native-vector-icons/Ionicons'
+  // const Tab = createBottomTabNavigator()
 
-  const getTabBarIcon = (routeName, focused, color, size) => {
-    let iconName;
-    if(routeName === 'Home'){
-      iconName = focused? 'home' : 'home-outline';
-    }
-    else if(routeName === 'Profile'){
-      iconName = focused? 'person' : 'person-outline';
-    }
-    else if(routeName === 'Setting'){
-      iconName = focused? 'settings' : 'settings-outline';
-    }
-    return <Icon name={iconName} size={size} color={color} />
+  // const getTabBarIcon = (routeName, focused, color, size) => {
+  //   let iconName;
+  //   if(routeName === 'Home'){
+  //     iconName = focused? 'home' : 'home-outline';
+  //   }
+  //   else if(routeName === 'Profile'){
+  //     iconName = focused? 'person' : 'person-outline';
+  //   }
+  //   else if(routeName === 'Setting'){
+  //     iconName = focused? 'settings' : 'settings-outline';
+  //   }
+  //   return <Icon name={iconName} size={size} color={color} />
 
-  }
-  const App = () => {
-    return (
-      <NavigationContainer>
-        <Tab.Navigator screenOptions={({route}) => ({
-          tabBarIcon: ({focused, color, size}) => getTabBarIcon(route.name,focused,color,size),
-          tabBarActiveTintColor:'#007bdd',
-          tabBarInactiveTintColor:'gray',
-          tabBarStyle:{
-            paddingBottom:5,
-            height:60,
-          },
-    })}>
-          <Tab.Screen name='Home' component={HomeScreen} />
-          <Tab.Screen name='Profile' component={ProfileScreen} />
-          <Tab.Screen name='Setting' component={SettingScreen} />
-        </Tab.Navigator>
-      </NavigationContainer>
-    )
-  }
+  // }
+  // const App = () => {
+  //   return (
+  //     <NavigationContainer>
+  //       <Tab.Navigator screenOptions={({route}) => ({
+  //         tabBarIcon: ({focused, color, size}) => getTabBarIcon(route.name,focused,color,size),
+  //         tabBarActiveTintColor:'#007bdd',
+  //         tabBarInactiveTintColor:'gray',
+  //         tabBarStyle:{
+  //           paddingBottom:5,
+  //           height:60,
+  //         },
+  //   })}>
+  //         <Tab.Screen name='Home' component={HomeScreen} />
+  //         <Tab.Screen name='Profile' component={ProfileScreen} />
+  //         <Tab.Screen name='Setting' component={SettingScreen} />
+  //       </Tab.Navigator>
+  //     </NavigationContainer>
+  //   )
+  // }
 
-  export default App
+  // export default App
 
+// *************** <TOP TAB NAVIGATION> ***************
 
+import { View, Text } from 'react-native'
+import React from 'react'
+import {NavigationContainer} from '@react-navigation/native'
+import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs'
+import ChatsScreen from './src/Navigation-screens/TopTab-Navigation/ChatsScreen'
+import StatusScreen from './src/Navigation-screens/TopTab-Navigation/StatusScreen'
+import CallsScreen from './src/Navigation-screens/TopTab-Navigation/CallsScreen'
+
+const Tab = createMaterialTopTabNavigator(); 
+const App = () => {
+  return (
+    <NavigationContainer>
+      <Tab.Navigator screenOptions={{
+        tabBarActiveTintColor:'#007bff',
+        tabBarInactiveTintColor:'gray',
+        tabBarStyle:{backgroundColor:'#fff'},
+        tabBarIndicatorStyle:{backgroundColor:'#007bff', height:3},
+        tabBarLabelStyle: {fontSize:16},
+      }}>
+        <Tab.Screen name='Chats' component={ChatsScreen}   />
+        <Tab.Screen name='Status' component={StatusScreen}  />
+        <Tab.Screen name='Calls' component={CallsScreen}  />
+      </Tab.Navigator>
+    </NavigationContainer>
+  )
+}
+
+export default App
