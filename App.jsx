@@ -33,7 +33,8 @@ import { View } from 'react-native';
 // import GET_API_LIST from './src/component/GET_API_LIST'
 // import PlatformExapmle from './src/component/PlatformExapmle'
 // import Search from './src/component/Search'
-import AsyncStorageExample from './src/component/AsyncStorageExample'
+// import AsyncStorageExample from './src/component/AsyncStorageExample'
+import ImageComponentExample from './src/component/ImageComponentExample'
 const App = () => {
   return (
     <View
@@ -82,7 +83,8 @@ const App = () => {
       {/* <GET_API_LIST /> */}
       {/* <PlatformExapmle /> */}
       {/* <Search/> */}
-      <AsyncStorageExample />
+      {/* <AsyncStorageExample /> */}
+      <ImageComponentExample />
     </View>
   );
 };
