@@ -320,16 +320,51 @@
 
 // *******************<REDUX TOOLKIT>*******************
 
+// import { View, Text } from 'react-native'
+// import React from 'react'
+// import { Provider } from 'react-redux' 
+// import { store } from './src/redux/store/store'
+// import Counter from './src/component/Counter'
+// const App = () => {
+//   return (
+//    <Provider store={store}>
+//     <Counter />
+//    </Provider>
+//   )
+// }
+
+// export default App
+
+// *******************<Zustand>*******************
+
+// import { View, Text } from 'react-native'
+// import React from 'react'
+// import One from './src/component/One'
+
+// const App = () => {
+//   return (
+//     <View style={{flex:1}}>
+//       <Text>App</Text>
+//       <One />
+//     </View>
+//   )
+// }
+
+// export default App
+
+// ###############<Native Wind>###############
+
+import './global.css';
 import { View, Text } from 'react-native'
 import React from 'react'
-import { Provider } from 'react-redux' 
-import { store } from './src/redux/store/store'
-import Counter from './src/component/Counter'
+import MyLogin from './src/component/MyLogin'
+
+
 const App = () => {
   return (
-   <Provider store={store}>
-    <Counter />
-   </Provider>
+    <View className = "flex-1" >
+      <MyLogin />
+    </View>
   )
 }
 
