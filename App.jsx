@@ -354,16 +354,50 @@
 
 // ###############<Native Wind>###############
 
-import './global.css';
+// import './global.css';
+// import { View, Text } from 'react-native'
+// import React from 'react'
+// import MyLogin from './src/component/MyLogin'
+
+
+// const App = () => {
+//   return (
+//     <View className = "flex-1" >
+//       <MyLogin />
+//     </View>
+//   )
+// }
+
+// export default App
+
+// ##############<Reanct Native Reanimated>##############
+
+// import './global.css';
+// import { View, Text } from 'react-native'
+// import React from 'react'
+// import AnimatedCardFlip from './src/component/AnimatedCardFlip'
+
+// const App = () => {
+//   return (
+//     <View className='flex-1'>
+//       <AnimatedCardFlip />
+//     </View>
+//   )
+// }
+
+// export default App
+
+// ********************<FireBase>********************
+
+
+import './global.css'
 import { View, Text } from 'react-native'
 import React from 'react'
-import MyLogin from './src/component/MyLogin'
-
 
 const App = () => {
   return (
-    <View className = "flex-1" >
-      <MyLogin />
+    <View className='flex-1'>
+      <Text className='text-center text-6xl'>Firebase with react native</Text>
     </View>
   )
 }
